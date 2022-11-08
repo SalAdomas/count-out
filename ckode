@@ -1,0 +1,30 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main(){
+int number, result, counter=0, zeros;
+
+do{
+    cout << "Iveskite norima skaiciu: ";
+  cin >> number;
+
+  }while (number < 0);
+
+  // KIEK SKAICIU
+  for(int i = number; i > 0; i = i/10)
+        counter++;
+
+   while(number > 0){
+
+       zeros = pow(10, counter - 1);
+
+       result = number / zeros;
+       number = number % zeros;
+       counter--;
+
+       //REZULTATAS
+       cout << " " << result;
+   }
+   cout<<endl;
+}
